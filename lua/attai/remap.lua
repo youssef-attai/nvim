@@ -34,7 +34,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Save with Ctrl+s
-vim.keymap.set({"n", "i"}, "<C-s>", ":w<CR>")
+vim.keymap.set({"n", "i"}, "<C-s>", function()
+    vim.cmd("w")
+end)
 
 -- Copy to system clipboard
 vim.keymap.set({"n", "v"}, "y", [["+y]])
