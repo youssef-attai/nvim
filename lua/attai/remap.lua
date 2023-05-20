@@ -46,6 +46,8 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "<C-q>", ":bdelete<CR>")
 vim.keymap.set("n", "Q", "<nop>")
+
+-- Format code
 vim.keymap.set("n", "<leader>fr", vim.lsp.buf.format)
 
 -- Replace word under cursor
