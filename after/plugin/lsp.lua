@@ -4,12 +4,11 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
     'tsserver',
-    'eslint',
     'lua_ls',
-    'jsonls',
-    'cssls',
-    'intelephense',
-    'pyright'
+--     'jsonls',
+--     'cssls',
+--     'intelephense',
+--     'pyright'
 })
 
 -- Fix Undefined global 'vim'
@@ -65,6 +64,12 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 require('lspconfig/prolog_ls')
-require('lspconfig').prolog_ls.setup{}
+require('lspconfig').prolog_ls.setup {}
+-- require('lspconfig').pyright.setup {}
+-- require('lspconfig').intelephense.setup {}
+-- require('lspconfig').cssls.setup {}
+-- require('lspconfig').jsonls.setup {}
+-- require('lspconfig').lua_ls.setup {}
+-- require('lspconfig').tsserver.setup {}
 
 lsp.setup()
