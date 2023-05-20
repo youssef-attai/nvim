@@ -37,7 +37,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({"n", "i"}, "<C-s>", ":w<CR>")
 
 -- Copy to system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({"n", "v"}, "y", [["+y]])
 
 -- Delete to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
