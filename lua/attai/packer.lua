@@ -52,4 +52,12 @@ return require('packer').startup(function(use)
     use("github/copilot.vim")
     use('numToStr/Comment.nvim')
     use('nvim-tree/nvim-tree.lua')
+
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
 end)
