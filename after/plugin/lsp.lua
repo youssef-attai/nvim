@@ -66,7 +66,8 @@ end
 lsp.on_attach(on_attach)
 
 require('lspconfig/prolog_ls')
-require('lspconfig').prolog_ls.setup {}
+lsp_config.prolog_ls.setup {}
+
 require("flutter-tools").setup {
     on_attach = on_attach,
 }
