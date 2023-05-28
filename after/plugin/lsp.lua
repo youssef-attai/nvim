@@ -67,6 +67,14 @@ lsp.on_attach(on_attach)
 
 require('lspconfig/prolog_ls')
 require('lspconfig').prolog_ls.setup {}
+require("flutter-tools").setup {
+    on_attach = on_attach,
+}
+
+-- lsp_config["dartls"].setup({
+--     on_attach = on_attach
+-- })
+
 -- require('lspconfig').pyright.setup {}
 -- require('lspconfig').intelephense.setup {}
 -- require('lspconfig').cssls.setup {}
