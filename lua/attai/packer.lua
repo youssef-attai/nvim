@@ -50,6 +50,6 @@ return require('packer').startup(function(use)
     }
     use 'jose-elias-alvarez/null-ls.nvim'
     use("github/copilot.vim")
-    use ('numToStr/Comment.nvim')
+    use('numToStr/Comment.nvim')
     use('nvim-tree/nvim-tree.lua')
 end)
