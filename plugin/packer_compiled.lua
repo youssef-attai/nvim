@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/attai/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/home/attai/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/attai/.local/share/nvim/site/pack/packer/start/dressing.nvim",
@@ -184,6 +179,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/attai/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/attai/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
