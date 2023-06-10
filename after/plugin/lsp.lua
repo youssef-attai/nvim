@@ -73,6 +73,7 @@ require("flutter-tools").setup {
     on_attach = on_attach,
 }
 
+
 -- lsp_config["dartls"].setup({
 --     on_attach = on_attach
 -- })
