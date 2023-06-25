@@ -2,41 +2,40 @@ vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
--- Save with Leader + w
-vim.keymap.set("n", "<leader>w", ":w<CR>")
+-- Save with Ctrl+s
+vim.keymap.set("n", "<C-s>", function()
+	vim.cmd("w")
+end)
 
--- Quit with Leader + q
-vim.keymap.set("n", "<leader>q", ":q<CR>")
-
--- Delete buffer with Leader + d
-vim.keymap.set("n", "<leader>bd", ":bd<CR>")
-
--- Save and quit with Leader + w+q
--- vim.keymap.set("n", "<leader>wq", ":wq<CR>")
-
--- Escape with jk in insert mode
--- vim.keymap.set("i", "jk", "<ESC>")
+-- Delete buffer with Leader + x
+vim.keymap.set("n", "<leader>x", function()
+	vim.cmd("bd")
+end)
 
 -- Move between buffers
 vim.keymap.set("n", "<TAB>", ":bnext<CR>")
 vim.keymap.set("n", "<S-TAB>", ":bprevious<CR>")
 
 -- Move between windows
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-h>", function()
+	vim.cmd("wincmd h")
+end)
+vim.keymap.set("n", "<C-j>", function()
+	vim.cmd("wincmd j")
+end)
+vim.keymap.set("n", "<C-k>", function()
+	vim.cmd("wincmd k")
+end)
+vim.keymap.set("n", "<C-l>", function()
+	vim.cmd("wincmd l")
+end)
 
 -- Split windows
 vim.keymap.set("n", "<leader>hs", "<C-w>s")
 vim.keymap.set("n", "<leader>vs", "<C-w>v")
 
--- Move selected line / block of text in visual mode
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 -- Search for visually selected text
-vim.keymap.set("v", "/", "y/<C-R>\"<CR>")
+vim.keymap.set("v", "/", 'y/<C-R>"<CR>')
 
 -- Keep cursor where it is when joining lines
 vim.keymap.set("n", "J", "mzJ`z")
@@ -52,29 +51,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Paste over text without losing the copied text from buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- Save with Ctrl+s
--- vim.keymap.set({ "n", "i" }, "<C-s>", function()
---   vim.cmd("w")
--- end)
-
--- Copy to system clipboard
-vim.keymap.set({ "n", "v" }, "y", [["+y]])
-
--- Delete to system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-
-vim.keymap.set("n", "Q", "<nop>")
-
 -- Format code
 vim.keymap.set("n", "<leader>fr", vim.lsp.buf.format)
 
 -- Replace word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- Quickly make a file executable
--- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
--- Easy way to source a file
--- vim.keymap.set("n", "<leader><leader>", function()
---     vim.cmd("so")
--- end)
+vim.keymap.set("n", "Q", "<nop>")

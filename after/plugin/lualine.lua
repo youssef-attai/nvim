@@ -1,7 +1,3 @@
-require('lualine').setup({
-    options = {
-        -- ...
-        theme = 'vscode',
-        -- ...
-    },
-})
+local lualine = require('lualine')
+
+lualine.setup()

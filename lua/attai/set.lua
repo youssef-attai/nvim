@@ -32,3 +32,7 @@ vim.opt.updatetime = 50
 vim.opt.guicursor = "a:blinkon100"
 vim.wo.cursorline = true
 
+vim.cmd("set cmdheight=0")
+
+vim.cmd("set clipboard=unnamedplus")
+
