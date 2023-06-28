@@ -58,10 +58,10 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- end)
 
 -- Copy to system clipboard
-vim.keymap.set({"n", "v"}, "y", [["+y]])
+vim.keymap.set({ "n", "v" }, "y", [["+y]])
 
 -- Delete to system clipboard
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "<C-q>", ":bdelete<CR>")
 vim.keymap.set("n", "Q", "<nop>")
