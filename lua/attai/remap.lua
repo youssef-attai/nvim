@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
+-- Save with Leader + w
+vim.keymap.set("n", "<leader>w", ":w<CR>")
 -- Move between windows
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
