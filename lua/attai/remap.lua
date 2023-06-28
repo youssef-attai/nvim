@@ -11,6 +11,12 @@ vim.keymap.set("n", "<leader>q", ":q<CR>")
 -- Delete buffer with Leader + d
 vim.keymap.set("n", "<leader>bd", ":bd<CR>")
 
+-- Save and quit with Leader + w+q
+-- vim.keymap.set("n", "<leader>wq", ":wq<CR>")
+
+-- Escape with jk in insert mode
+-- vim.keymap.set("i", "jk", "<ESC>")
+
 -- Move between buffers
 vim.keymap.set("n", "<TAB>", ":bnext<CR>")
 vim.keymap.set("n", "<S-TAB>", ":bprevious<CR>")
@@ -47,9 +53,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Save with Ctrl+s
-vim.keymap.set({"n", "i"}, "<C-s>", function()
-    vim.cmd("w")
-end)
+-- vim.keymap.set({ "n", "i" }, "<C-s>", function()
+--   vim.cmd("w")
+-- end)
 
 -- Copy to system clipboard
 vim.keymap.set({"n", "v"}, "y", [["+y]])
