@@ -11,6 +11,10 @@ vim.keymap.set("n", "<leader>q", ":q<CR>")
 -- Delete buffer with Leader + d
 vim.keymap.set("n", "<leader>bd", ":bd<CR>")
 
+-- Move between buffers
+vim.keymap.set("n", "<TAB>", ":bnext<CR>")
+vim.keymap.set("n", "<S-TAB>", ":bprevious<CR>")
+
 -- Move between windows
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
