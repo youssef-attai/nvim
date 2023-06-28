@@ -63,7 +63,6 @@ vim.keymap.set({ "n", "v" }, "y", [["+y]])
 -- Delete to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-vim.keymap.set("n", "<C-q>", ":bdelete<CR>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Format code
@@ -79,4 +78,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- vim.keymap.set("n", "<leader><leader>", function()
 --     vim.cmd("so")
 -- end)
-
