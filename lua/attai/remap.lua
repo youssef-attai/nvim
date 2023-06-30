@@ -57,4 +57,9 @@ vim.keymap.set("n", "<leader>fr", vim.lsp.buf.format)
 -- Replace word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Toggle mardown preview in markdown markdown files
+vim.keymap.set("n", "<leader>mp", function()
+  vim.cmd("MarkdownPreviewToggle")
+end)
+
 vim.keymap.set("n", "Q", "<nop>")
