@@ -1,9 +1,6 @@
 local lspconfig = require("lspconfig")
 
 local on_attach = function(client, bufnr)
-	client.server_capabilities.documentFormattingProvider = false
-	client.server_capabilities.documentRangeFormattingProvider = false
-
 	local opts = { buffer = bufnr, remap = false }
 
 	vim.keymap.set("n", "gd", function()
