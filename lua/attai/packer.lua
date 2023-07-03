@@ -114,14 +114,6 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	-- Fugitive
-	use({
-		"tpope/vim-fugitive",
-		config = function()
-			vim.keymap.set("n", "<leader>gt", vim.cmd.Git)
-		end,
-	})
-
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install",
