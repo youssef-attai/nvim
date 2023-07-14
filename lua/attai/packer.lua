@@ -4,122 +4,126 @@
 vim.cmd.packadd("packer.nvim")
 
 return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
+  use("wbthomason/packer.nvim")
 
-	use("nvim-lua/plenary.nvim")
+  use("nvim-lua/plenary.nvim")
 
-	use({
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	})
+  use({
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup()
+    end,
+  })
 
-	use({
-		"nvim-tree/nvim-web-devicons",
-		config = function()
-			require("nvim-web-devicons").setup()
-		end,
-	})
+  use({
+    "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("nvim-web-devicons").setup()
+    end,
+  })
 
-	use({
-		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("indent_blankline").setup()
-		end,
-	})
+  use({
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("indent_blankline").setup()
+    end,
+  })
 
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  })
 
-	use({
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	})
+  use({
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end,
+  })
 
-	use({
-		"williamboman/mason.nvim",
-		run = ":MasonUpdate",
-		config = function()
-			require("mason").setup()
-		end,
-	})
+  use({
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate",
+    config = function()
+      require("mason").setup()
+    end,
+  })
 
-	use("neovim/nvim-lspconfig")
+  use("williamboman/mason-lspconfig.nvim")
 
-	use("hrsh7th/nvim-cmp")
+  use("neovim/nvim-lspconfig")
 
-	use("L3MON4D3/LuaSnip")
+  use("jay-babu/mason-null-ls.nvim")
 
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup()
-		end,
-	})
+  use("hrsh7th/nvim-cmp")
 
-	use("saadparwaiz1/cmp_luasnip")
-	use("hrsh7th/cmp-nvim-lua")
-	use("hrsh7th/cmp-cmdline")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
+  use("L3MON4D3/LuaSnip")
 
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	})
+  use({
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup()
+    end,
+  })
 
-	use({
-		"nvim-tree/nvim-tree.lua",
-		config = function()
-			require("nvim-tree").setup()
-		end,
-	})
+  use("saadparwaiz1/cmp_luasnip")
+  use("hrsh7th/cmp-nvim-lua")
+  use("hrsh7th/cmp-cmdline")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-buffer")
+  use("hrsh7th/cmp-path")
 
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
-		requires = { { "nvim-lua/plenary.nvim" } },
-		config = function()
-			require("telescope").setup()
-		end,
-	})
+  use({
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  })
 
-	use({
-		"catppuccin/nvim",
-		as = "catppuccin",
-		config = function()
-			vim.cmd.colorscheme("catppuccin-mocha")
-		end,
-	})
+  use({
+    "nvim-tree/nvim-tree.lua",
+    config = function()
+      require("nvim-tree").setup()
+    end,
+  })
 
-	use("nvim-lualine/lualine.nvim")
+  use({
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.1",
+    requires = { { "nvim-lua/plenary.nvim" } },
+    config = function()
+      require("telescope").setup()
+    end,
+  })
 
-	use("jose-elias-alvarez/null-ls.nvim")
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      vim.cmd.colorscheme("catppuccin-mocha")
+    end,
+  })
 
-	use("github/copilot.vim")
+  use("nvim-lualine/lualine.nvim")
 
-	use({
-		"akinsho/flutter-tools.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"stevearc/dressing.nvim", -- optional for vim.ui.select
-		},
-	})
+  use("jose-elias-alvarez/null-ls.nvim")
 
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	})
+  use("github/copilot.vim")
+
+  use({
+    "akinsho/flutter-tools.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
+    },
+  })
+
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  })
 end)
