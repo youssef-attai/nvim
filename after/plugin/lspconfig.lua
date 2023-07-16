@@ -31,17 +31,22 @@ end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig.pyright.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-lspconfig.html.setup({
+lspconfig.bashls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
 
 lspconfig.cssls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.html.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.jsonls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
@@ -64,8 +69,13 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.marksman.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.pyright.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 require("flutter-tools").setup({
