@@ -79,4 +79,5 @@ vim.keymap.set("t", "<F5>", "<C-\\><C-n>:FloatermKill<CR>")
 
 -- Lazygit
 vim.keymap.set("n", "<leader>lg", ":FloatermNew lazygit<CR>")
+vim.keymap.set("n", "<leader><leader>", ":FloatermNew lazygit<CR>")
 
