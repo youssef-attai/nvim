@@ -133,4 +133,6 @@ return require("packer").startup(function(use)
 			require("leap").add_default_mappings()
 		end,
 	})
+
+	use("voldikss/vim-floaterm")
 end)
