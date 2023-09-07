@@ -2,9 +2,9 @@ vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
--- Save with Ctrl+s
+-- Save all buffers with ctrl + s
 vim.keymap.set("n", "<C-s>", function()
-	vim.cmd("w")
+	vim.cmd("wa")
 end)
 
 -- Delete buffer with Leader + x
