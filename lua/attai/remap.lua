@@ -12,6 +12,11 @@ vim.keymap.set("n", "<leader>x", function()
 	vim.cmd("bd")
 end)
 
+-- Quit buffer with Leader + q
+-- vim.keymap.set("n", "<leader>q", function()
+-- 	vim.cmd("q")
+-- end)
+
 -- Move between buffers
 vim.keymap.set("n", "<TAB>", ":bnext<CR>")
 vim.keymap.set("n", "<S-TAB>", ":bprevious<CR>")
