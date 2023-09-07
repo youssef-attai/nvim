@@ -63,3 +63,20 @@ vim.keymap.set("n", "<leader>mp", function()
 end)
 
 vim.keymap.set("n", "Q", "<nop>")
+
+
+-- Floaterm
+vim.keymap.set("n", "<F1>", ":FloatermNew<CR>")
+vim.keymap.set("t", "<F1>", "<C-\\><C-n>:FloatermNew<CR>")
+vim.keymap.set("n", "<F2>", ":FloatermToggle<CR>")
+vim.keymap.set("t", "<F2>", "<C-\\><C-n>:FloatermToggle<CR>")
+vim.keymap.set("n", "<F4>", ":FloatermNext<CR>")
+vim.keymap.set("t", "<F4>", "<C-\\><C-n>:FloatermNext<CR>")
+vim.keymap.set("n", "<F3>", ":FloatermPrev<CR>")
+vim.keymap.set("t", "<F3>", "<C-\\><C-n>:FloatermPrev<CR>")
+vim.keymap.set("n", "<F5>", ":FloatermKill<CR>")
+vim.keymap.set("t", "<F5>", "<C-\\><C-n>:FloatermKill<CR>")
+
+-- Lazygit
+vim.keymap.set("n", "<leader>lg", ":FloatermNew lazygit<CR>")
+
