@@ -57,7 +57,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Format code
-vim.keymap.set("n", "<leader>fr", vim.lsp.buf.format)
+vim.keymap.set("n", "<C-f>", vim.lsp.buf.format)
 
 -- Replace word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
