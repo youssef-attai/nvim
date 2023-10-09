@@ -1,2 +1,2 @@
-require("attai")
-
+require("attai.core")
+require("attai.lazy")

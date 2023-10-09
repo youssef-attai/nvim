@@ -1,5 +1,0 @@
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<F12>", builtin.find_files, {})
-vim.keymap.set("n", "<F11>", builtin.live_grep, {})
-vim.keymap.set("n", "<F10>", builtin.buffers, {})
-vim.keymap.set("n", "<F9>", builtin.resume, {})
