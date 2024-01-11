@@ -2,10 +2,11 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
--- Save all buffers with ctrl + s
-keymap.set("n", "<C-s>", function()
-	vim.cmd("wa")
-end)
+-- Save all buffers with ctrl + s and command + s
+keymap.set("n", "<C-s>", ":wa<CR>")
+keymap.set("i", "<C-s>", "<Esc>:wa<CR>")
+keymap.set("n", "<D-s>", ":wa<CR>")
+keymap.set("i", "<D-s>", "<Esc>:wa<CR>")
 
 -- Delete buffer with Leader + x
 keymap.set("n", "<leader>x", function()
